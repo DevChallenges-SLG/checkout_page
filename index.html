@@ -49,6 +49,7 @@
               name="email"
               id="email"
               placeholder="Enter your email..."
+              required
             />
           </div>
           </p>
@@ -61,6 +62,7 @@
               name="phone"
               id="phone"
               placeholder="Enter your phone..."
+              required
             />
           </div>
           </p>
@@ -76,6 +78,7 @@
               name="full-name"
               id="full-name"
               placeholder="Enter your name..."
+              required
             />
           </div>
           </p>
@@ -88,6 +91,7 @@
               name="address"
               id="address"
               placeholder="Your address.."
+              required
               />
             </div>
           </p>
@@ -100,34 +104,117 @@
               name="city"
               id="city"
               placeholder="Your city.."
+              required
               />
             </div>
           </p>
           <div class="row">
-          <p>
-            <label for="Country">Country</label>
-            <div class="input-wrapper">
-              <span class="material-symbols-outlined"> public </span>
-              <select name="country" id="country">
-                <option value="Argentina">Argentina</option>
-              </select>
-            </div>
-          </p>
-          <p>
-            <label for="city">City</label>
-            <div class="input-wrapper">
-              <span class="material-symbols-outlined"> location_city </span>
-              <input
-              type="text"
-              name="city"
-              id="city"
-              placeholder="Your city.."
-              />
-            </div>
-          </p>
+            <div>
+            <p>
+              <label for="country">Country</label>
+              <div class="input-wrapper">
+                <p><span class="material-symbols-outlined"> public </span></p>
+                <select name="country" id="country" placeholder="Your country.." required>
+                  <option value="">Your country..</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Uruguay">Uruguay</option>
+                </select>
+              </div>
+            </p>
+          </div>
+          <div>
+            <p>
+              <label for="postal-code">Postal code</label>
+              <div class="input-wrapper">
+                <span class="material-symbols-outlined">markunread_mailbox</span>
+                <input
+                type="text"
+                name="postal-code"
+                id="postal-code"
+                placeholder="Your postal code.."
+                />
+              </div>
+            </p>
+          </div>
         </div>
+        
+        <label for="save-information">
+        <input type="checkbox" name="save-information" id="save-information" required>
+        Save this information for next time
+        </label>
         </fieldset>
+        <fieldset>
+          <div class="card-container">
+            <figure class="item-container">
+              <img src="./images/photo1.png" alt="photo of the a vintage backbag">
+              <figcaption>
+                <h4>Vintage Backbag</h4>
+                <div class="prices">
+                  <h5>$54.99</h5>
+                  <h6>$94.99</h6>
+                </div>
+                <div class="quantity">
+                    <span 
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                    class="material-symbols-outlined">
+                      indeterminate_check_box
+                      </span>
+
+                  <input type="number" name="quantity-item1" id="quantity-item1"
+                  min="0"
+                  value="1"
+                  >
+                    <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"class="material-symbols-outlined">
+                      add_box
+                      </span>
+                </div>
+              </figcaption>
+            </figure>
+            <figure class="item-container">
+              <img src="./images/photo2.png" alt="photo of Levi Shoes">
+              <figcaption>
+                <h4>Levi Shoes</h4>
+                <div class="prices">
+                  <h5>$74.99</h5>
+                  <h6>$124.99</h6>
+                </div>
+                <div class="quantity">
+                    <span 
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                    class="material-symbols-outlined">
+                      indeterminate_check_box
+                      </span>
+
+                  <input type="number" name="quantity-item2" id="quantity-item2"
+                  min="0"
+                  value="1"
+                  >
+                    <span onclick="this.parentNode.querySelector('input[type=number]').stepUp()"class="material-symbols-outlined">
+                      add_box
+                      </span>
+                </div>
+              </figcaption>
+            </figure>
+            <hr>
+            <div class="shipping" >
+              <h3>Shipping</h3>
+              <p>$19</p>
+            </div>
+            <hr>
+            <div class="total" >
+              <h3>Total</h3>
+              <p>$148.98</p>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit">Continue</button>
       </form>
     </main>
+    <footer>
+      <p>
+        created by <span>Sergio Leopoldo Genes</span> - devChallenges.io
+      </p>
+    </footer>
   </body>
 </html>
